@@ -1,6 +1,10 @@
-FROM python:3.9.4-alpine
+FROM python:3.9.4-alpine AS builder
 COPY requirements.txt /tmp/requirements.txt
-RUN pip3 install --no-cache-dir --upgrade pip && pip3 install --no-cache-dir -r /tmp/requirements.txt
+RUN pip3 install --no-cache-dir --upgrade pip && pip3 install --user --no-cache-dir -r /tmp/requirements.txt
+
+FROM python:3.9.4-alpine
+COPY --from=builder /root/.local /root/.local
+ENV PATH=/root/.local:$PATH
 COPY tor-to-influxdb2.py /tor-to-influxdb2.py
 COPY healthcheck /healthcheck
 ENV VERBOSE="false" 
@@ -15,4 +19,4 @@ ENV INFLUX_SERVICE_TAG="tor"
 ENV INFLUX_SEND_VERSION_TAG="true"
 HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
             CMD grep OK /healthcheck || exit 1
-ENTRYPOINT [ "python", "tor-to-influxdb2.py" ]
+ENTRYPOINT [ "python", "/tor-to-influxdb2.py" ]
