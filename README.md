@@ -136,7 +136,7 @@ https://github.com/torproject/torspec/blob/master/control-spec.txt
 
 # Healthchecks
 
-I've implemented an healthcheck that sets the container to unhealthy as long as there is at least one Unbound server that can't be queried or if there are problems uploading stats to influxdb2 server. The container becomes healthy in about 30 seconds if everything is fine and if there is a problem it produces an unhealthy status within 90 seconds.
+I've implemented an healthcheck that sets the container to unhealthy as long as there is at least one Tor server that can't be queried or if there are problems uploading stats to influxdb2 server. The container becomes healthy in about 30 seconds if everything is fine and if there is a problem it produces an unhealthy status within 90 seconds.
 
 If the container is unhealthy (you can see its status via docker ps command) you can check the logs with docker logs CONTAINER_ID
 
