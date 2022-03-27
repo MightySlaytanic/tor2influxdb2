@@ -4,6 +4,8 @@
 * **1.4**: upgraded Python base image to 3.10.0rc1-alpine
 * **1.4.1**: upgraded Python base image to 3.10.0-alpine
 * **1.4.2**: upgraded Python base image to 3.10.2-alpine3.15
+* **1.4.3**: upgraded Python base image to 3.11.0a6-alpine3.15
+
 
 # Sources
 
