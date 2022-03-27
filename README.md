@@ -6,7 +6,6 @@
 * **1.4.2**: upgraded Python base image to 3.10.2-alpine3.15
 * **1.4.3**: upgraded Python base image to 3.11.0a6-alpine3.15
 
-
 # Sources
 
 You can find Dockerfile and tor-to-influxdb2.py sources on GitHub:
