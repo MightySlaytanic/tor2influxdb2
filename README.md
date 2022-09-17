@@ -6,19 +6,25 @@
 * **1.4.2**: upgraded Python base image to 3.10.2-alpine3.15
 * **1.4.3**: upgraded Python base image to 3.11.0a6-alpine3.15
 * **1.4.4**: upgraded Python base image to 3.11.0b3-alpine3.15
+* **1.4.5**: upgraded Python base image to 3.11.0rc2-alpine3.16
+
+# Info
+
+You can find my article about my tor monitoring setup via tor2influxdb2 at the following page:
+<http://giannicostanzi.medium.com>
 
 # Sources
 
 You can find Dockerfile and tor-to-influxdb2.py sources on GitHub:
-https://github.com/MightySlaytanic/tor2influxdb2
+<https://github.com/MightySlaytanic/tor2influxdb2>
 
 # Docker Hub Image
 
-https://hub.docker.com/repository/docker/giannicostanzi/tor2influxdb2
+<https://hub.docker.com/repository/docker/giannicostanzi/tor2influxdb2>
 
 # Base Image
 
-The base image is the official *python:3.9.4-alpine* (*python-3.9.4* for image 1.0) on top of which we install *influxdb_client* and *stem* (via *pip*).
+The base image is the official *python:3.x.y-alpine* on top of which we install *influxdb_client* and *stem* (via *pip*).
 
 # Environment Variables
 
