@@ -8,6 +8,7 @@
 * **1.4.4**: upgraded Python base image to 3.11.0b3-alpine3.15
 * **1.4.5**: upgraded Python base image to 3.11.0rc2-alpine3.16
 * **1.4.6**: upgraded Python base image to 3.11.2-alpine3.17
+* **1.4.7**: forced setuptools>=65.5.1 due to vulnerabilities
 
 # Info
 
